@@ -1,0 +1,106 @@
+{
+  "name": "electron-react-antd-antv-ts-cli",
+  "version": "0.1.0",
+  "author": {
+    "name": "Herbert He",
+    "email": "Herbert.He0229@gmail.com"
+  },
+  "description": "A cli-tool makes you develop electron-react soon!",
+  "repository": "https://github.com/HerbertHe/electron-react-antd-antv-ts-cli",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "antd": "^4.0.2",
+    "antd-dayjs-webpack-plugin": "^0.0.8",
+    "babel-plugin-import": "^1.13.0",
+    "bizcharts": "^3.5.8",
+    "customize-cra": "^0.9.1",
+    "electron-is-dev": "^1.1.0",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
+    "react": "^16.13.0",
+    "react-app-rewired": "^2.1.5",
+    "react-dom": "^16.13.0",
+    "react-scripts": "3.4.0",
+    "typescript": "~3.7.2"
+  },
+  "build": {
+    "productName": "electron-react-antd-antv-ts-cli",
+    "appId": "cn.jieec.eraatc",
+    "copyright": "copyright © Herbert He",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "icon": "build/logo512.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "files": [
+      "dist/**/*"
+    ],
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/favicon.ico",
+      "uninstallerIcon": "build/favicon.ico",
+      "installerHeaderIcon": "build/favicon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Eraatc"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "url": "https://github.com"
+      }
+    ]
+  },
+  "main": "./public/electron.js",
+  "homepage": ".",
+  "scripts": {
+    "react:dev": "react-app-rewired start",
+    "react:build": "react-app-rewired build",
+    "react:test": "react-app-rewired test",
+    "react:eject": "react-scripts eject",
+    "ele:dev": "nodemon --watch ./public/electron.js --exec concurrently \"wait-on http://localhost:3000 && electron .\" \"cross-env BROWSER=none yarn run react:dev\"",
+    "build:win64": "yarn react:build && electron-builder --win --x64"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "cross-env": "^7.0.0",
+    "devtron": "^1.4.0",
+    "electron": "8.1.1",
+    "electron-builder": "^22.4.1",
+    "nodemon": "^2.0.2",
+    "wait-on": "^4.0.0"
+  }
+}
