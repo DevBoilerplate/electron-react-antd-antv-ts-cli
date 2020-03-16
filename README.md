@@ -2,6 +2,8 @@
 
 一个集成electron、react、antd、antv的ts版开发脚手架，便于快速搭建基于react开发的electron桌面应用
 
+> EdeverClient可视化客户端便于更好的获取脚手架更新动态, 基于`electron-react-antd-antv-cli`构建! GitHub: [HerbertHe/EdeverClient](https://github.com/HerbertHe/EdeverClient/releases), Gitee: [HerbertHe/EdeverClient](https://gitee.com/HerbertHe/EdeverClient/releases)
+
 ## 环境依赖
 
 * nodejs [未安装可参考](https://herberthe.gitee.io/2020/01/26/Nodejs%E5%AE%89%E8%A3%85%E8%8B%A5%E5%B9%B2%E9%97%AE%E9%A2%98%E9%81%BF%E5%9D%91/)
@@ -23,6 +25,7 @@ ELECTRON_MIRROR="https://cdn.npm.taobao.org/dist/electron/"
 
 ## 更新记录
 
+* 2020/03/16: 引入`.yarnclean`优化打包代码
 * 2020/03/13: 新增完整的项目依赖云云
 
 ## 快速使用
@@ -96,12 +99,9 @@ yarn run ele:dev
     * 如何使用？我这个项目你直接跑就可以了`yarn build:win64`
     * 配置文件参考官方文档[electron-builder](https://www.electron.build/configuration/configuration)
 
-## 打包及debug参考文章
+## 打包更新信息
 
-* [electron-builder打包的基础设置和常见问题](https://github.com/QDMarkMan/CodeBlog/blob/master/Electron/electron-builder%E6%89%93%E5%8C%85%E8%AF%A6%E8%A7%A3.md)
-* [国内electron-vue build报错解决方法](https://juejin.im/post/5d102497e51d4556be5b3a74)
-* [Error: Application entry file "build/electron.js" in the "\<path\>/dist/mac/\<app-name\>/Contents/Resources/app.asar" does not exist. #2404](https://github.com/electron-userland/electron-builder/issues/2404)
-* [Electron 应用如何利用 create-react-app 从 0 到 1](https://juejin.im/post/5b86b7fd6fb9a019c476fc06)
+> 请参考`electron-react-antd-antv-cli`的**打包优化参考建议**
 
 ## 参考文档
 
