@@ -69,6 +69,10 @@ yarn run ele:dev
         # Ctrl + c后输入y即可退出命令行启动预览环境
     ```
 
+## 关于`electron`等基础API的引用
+
+在TypeScript中可以使用[方案三](https://blog.csdn.net/qq_38333496/article/details/102474532?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task)，直接在所需要的地方声明调用api
+
 ## 文档
 
 * [更新日志](./doc/UPDATE.md)
