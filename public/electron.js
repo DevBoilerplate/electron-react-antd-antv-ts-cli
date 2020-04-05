@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require("electron")
+const { app, BrowserWindow } = require("electron")
 const path = require('path')
 const isDev = require("electron-is-dev")
 // 自动更新
@@ -18,7 +18,7 @@ let mainWindow
 // let webContents
 
 function createWindow() {
-    // require("devtron").install()
+    require("devtron").install()
     mainWindow = new BrowserWindow({
         width: 800,
         height: 600,
